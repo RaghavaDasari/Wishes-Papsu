@@ -1,0 +1,235 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #262626;
+  color: white;
+  font-family: cursive;
+}
+
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 100px;
+  background-color: #262626;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  /* box-shadow: 45px 45px 45px rgba(0,0,0,0.8); */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+.container img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 220px;
+  height: 220px;
+  z-index: 10;
+  opacity: 0;
+  animation: img-anim 4s linear forwards;
+  animation-delay: 11s;
+}
+
+.container .love{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg) translate(15px,15px);
+  background-color: #FF1493;
+  animation: animate 1s linear infinite;
+  animation-delay: 1s;
+}
+
+.container .love::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #FF1493;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  border-radius: 50%;
+}
+
+.container .love::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #FF1493;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  border-radius: 50%;
+}
+
+#happy{
+  position: absolute;
+  top: 14%;
+  left: 4%;
+  transform: rotateZ(-30deg);
+}
+#happy path:nth-child(1){
+  stroke-dasharray: 546px;
+  stroke-dashoffset: 546px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 3.5s;
+}
+#happy path:nth-child(2){
+  stroke-dasharray: 446px;
+  stroke-dashoffset: 446px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 3.5s;
+}
+#happy path:nth-child(3){
+  stroke-dasharray: 523px;
+  stroke-dashoffset: 523px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 3.5s;
+}
+#happy path:nth-child(4){
+  stroke-dasharray: 523px;
+  stroke-dashoffset: 523px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 3.5s;
+}
+#happy path:nth-child(5){
+  stroke-dasharray: 558px;
+  stroke-dashoffset: 558px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 3.5s;
+}
+
+#bday{
+  position: absolute;
+  top: 60%;
+  right: 5%;
+  transform: rotateZ(-30deg);
+}
+
+#bday path:nth-child(1){
+  stroke-dasharray: 674px;
+  stroke-dashoffset: 674px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 7s;
+}
+#bday path:nth-child(2){
+  stroke-dasharray: 598px;
+  stroke-dashoffset: 598px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 7s;
+}
+#bday path:nth-child(3){
+  stroke-dasharray: 513px;
+  stroke-dashoffset: 513px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 7s;
+}
+#bday path:nth-child(4){
+  stroke-dasharray: 641px;
+  stroke-dashoffset: 641px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 7s;
+}
+
+#wave{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-47%,-50%);
+}
+
+#wave path{
+  stroke-dasharray: 4170px;
+  stroke-dashoffset: 4170px;
+  stroke-width: 3px;
+  animation: line-anim 8s linear forwards;
+  animation-delay: 3.5s;
+}
+
+#papsu{
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#papsu path:nth-child(1){
+  stroke-dasharray: 776px;
+  stroke-dashoffset: 776px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 11s;
+}
+#papsu path:nth-child(2){
+  stroke-dasharray: 480px;
+  stroke-dashoffset: 480px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 11s;
+}
+#papsu path:nth-child(3){
+  stroke-dasharray: 450px;
+  stroke-dashoffset: 450px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 11s;
+}
+#papsu path:nth-child(4){
+  stroke-dasharray: 603px;
+  stroke-dashoffset: 603px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 11s;
+}
+#papsu path:nth-child(5){
+  stroke-dasharray: 445px;
+  stroke-dashoffset: 445px;
+  animation: line-anim 3.5s linear forwards;
+  animation-delay: 11s;
+}
+
+
+@keyframes animate{
+  0%{
+    transform: rotate(45deg) translate(15px,15px) scale(1);
+  }
+  25%{
+    transform: rotate(45deg) translate(15px,15px) scale(1);
+  }
+  30%{
+    transform: rotate(45deg) translate(15px,15px) scale(1.4);
+  }
+  50%{
+    transform: rotate(45deg) translate(15px,15px) scale(1.2);
+  }
+  70%{
+    transform: rotate(45deg) translate(15px,15px) scale(1.4);
+  }
+  90%{
+    transform: rotate(45deg) translate(15px,15px) scale(1);
+  }
+  100%{
+    transform: rotate(45deg) translate(15px,15px) scale(1);
+  }
+}
+
+@keyframes line-anim{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes img-anim{
+  to{
+    opacity: 1;
+  }
+}
